@@ -1,7 +1,5 @@
 # ChatApp  #
 
-![](http://g.recordit.co/JYruQDLd0h.gif)
-
 A small functional person-to-person message center application built using Django.
 It has a REST API and uses WebSockets to notify clients of new messages and 
 avoid polling.
@@ -71,34 +69,18 @@ pipenv --python 3 shell
 ```bash
 pipenv install
 ```
-3. Create a MySQL database
-```sql
-CREATE DATABASE chat CHARACTER SET utf8;
-```
-4. Start Redis Server
-```bash
-redis-server
-```
-
-5. Init database
+3. Init database
 ```bash
 ./manage.py migrate
 ```
-6. Run tests
-```bash
-./manage.py test
-```
-
-7. Create admin user
+4. Create admin user
 ```bash
 ./manage.py createsuperuser
 ```
-
-8. Run development server
+5. Run development server
 ```bash
 ./manage.py runserver
 ```
-
 To override default settings, create a local_settings.py file in the chat folder.
 
 Message prefetch config (load last n messages):
